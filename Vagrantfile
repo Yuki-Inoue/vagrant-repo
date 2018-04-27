@@ -45,6 +45,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       .vm
       .provision 'shell',
                  privileged: false,
-                 inline: 'curl -s https://raw.githubusercontent.com/Yuki-Inoue/dot-files/master/install-from-github.sh | sh'
+                 inline: 'sudo apt update && sudo apt upgrade -y && curl -s https://raw.githubusercontent.com/Yuki-Inoue/dot-files/master/install-from-github.sh | sh'
   end
 end
